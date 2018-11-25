@@ -1,0 +1,25 @@
+table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+#canvas{
+  z-index: 1;
+  position: absolute;
+  display: block;
+  margin: 2px auto;
+  border: 2px dotted blue;
+}
+
+#canvas2{
+  position: absolute;
+  display: block;
+  margin: 2px auto;
+  border: 2px dotted blue;
+}
+
+.options{
+  position: relative;
+  left:20px;
+}

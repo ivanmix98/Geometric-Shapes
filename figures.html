@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Proyecte Canvas</title>
+  <link rel="stylesheet" type="text/css" href="css.css">
+  <script type="text/javascript" src="./figures.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body background="fondo.jpg" onload="dibujarCanvas()">
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Video</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="figures.html">Figures</a>
+      </li>
+  </nav>
+
+  <br>
+
+  <table>
+    <tr>
+      <td colspan="3">
+        <div class="form-group">
+          <select id="tipus" onchange="dibujarCanvas()" class="form-control">
+            <option value="rectangle">rectangle</option>
+            <option value="quadrat">quadrat</option>
+            <option value="triangle">triangle</option>
+            <option value="cercle">cercle</option>
+            <option value="pentagon">pentagon</option>
+            <option value="octaedre">octàedre</option>
+            <option value="dodecaedre">dodecàedre</option>
+            <option value="rombe">rombe</option>
+            <option value="romboide">romboide</option>
+            <option value="esfera">esfera</option>
+          </select>
+        </div>
+      </td>
+
+    <tr>
+      <td>
+        <div>Color Figura</div>
+      </td>
+      <td>
+        <div>Color Linia</div>
+      </td>
+      <td>
+          <div>Color Text</div>
+        </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div class="input-group mb-1">
+          <input id="color" onchange="dibujarCanvas()" type="color" class="form-control">
+          <input id="color2" onchange="dibujarCanvas()" type="color" class="form-control">
+          <input id="color3" onchange="myFunction()" type="color" class="form-control">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div class="form-check-inline">
+
+          <label>
+            <input class="form-check-input" type="checkbox" id="myCheck" onclick="myFunction()">Text
+          </label></div>
+          <div class="form-check-inline">
+          <label class="form-check-inline">Bitmap:</label>
+              <select id="bitmap" onchange="bitmap()" class="form-control" style="width: 93%">
+                  <option value="cap">Cap</option>
+                <option value="negatiu">Negatiu</option>
+                <option value="bn">Grisos</option>
+                <option value="sepia">Sepia</option>
+              </select>
+        </div>
+        <div class="form-check-inline">
+            <label>Tipus línea:&nbsp;</label>
+          <select id="dis" onchange="dibujarCanvas()" class="form-control" style="width: 60%">
+              <option value="continua">Continua</option>
+              <option value="discontinua">Discontinua</option>
+            </select></div>
+
+        </td></tr>
+        <tr>
+          <td colspan="3">
+              <div class="form-check-inline">
+              <label>Gruix Línea:</label>
+              <select id="grosor" onchange="dibujarCanvas()" class="form-control" style="width: 43%">
+                  <option value="x1">x1</option>
+                  <option value="x1.5">x1.5</option>
+                  <option value="x2">x2</option>
+                </select>
+              </div>
+              <div class="form-check-inline">
+        <label>Mida text:</label>
+      <select id="mida" onchange="myFunction()" class="form-control" style="width: 62%">
+          <option value="normal">estàndard</option>
+          <option value="small">petita</option>
+          <option value="little">minúscula</option>
+        </select></div>
+        <div class="form-check-inline">
+          <label>Fons:</label>
+        <select id="fondo" onchange="fondo()" class="form-control" style="width: 73%">
+            <option value="cap">Cap</option>
+            <option value="fondo1">Fondo 1</option>
+            <option value="fondo2">Fondo 2</option>
+            <option value="fondo3">Fondo 3</option>
+          </select></div>
+
+      </td>
+    </tr>
+    </tr>
+
+    <tr>
+      <td colspan="3">
+        <canvas id="canvas" width="600" height="600">
+          tu navegador no soporta canvas
+        </canvas>
+        <canvas id="canvas2" width="600" height="600">
+          tu navegador no soporta canvas
+        </canvas>
+      </td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
